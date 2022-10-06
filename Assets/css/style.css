@@ -4,145 +4,372 @@
   }
   
   body {
-    background-color: #c2238f;
+    background-color: white;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     
 }
 
-
-  /*header*/
+/*-----------------------------header---------------------------------*/
 
   /* Style the header with a grey background and some padding */
+  /* Style the header with a grey background and some padding */
 .header {
-    overflow: hidden;
-    background-color: #f1f1f1;
-    padding: 20px 10px;
-  }
+  overflow: hidden;
+  background-color: black;
+  padding: 20px 10px;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color:whitesmoke;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 25px;
+  border-radius: 4px;
+  margin-right: 1cm;
   
-  /* Style the header links */
+
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 27px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: rgb(221, 221, 221);
+  color: blue;
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
   .header a {
-    color: black;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
-  }
-
-  .sidebar img{
-    height: 200px;
-    width: 200px;
-    align-items: flex-start;
-  }
-.
-
-  
-  /* Change the background color on mouse-over */
-  .header a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Style the active/current link*/
-  .header a.active {
-    background-color: dodgerblue;
-    color: white;
-  }
-  
-  /* Float the link section to the right */
-  .header-right {
-    float: right;
-  }
-  
-  .header-left{
-    align-content: flex-start;
-
-  }
-
-
-  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-  @media screen and (max-width: 500px) {
-    .header a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    .header-right {
-      float: none;
-    }
-  }
-
-
-
- 
-  /* The side navigation menu */
-.sidebar {
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-  }
-  
-  /* Sidebar links */
-  .sidebar a {
+    float: none;
     display: block;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
+    text-align: left;
   }
-  
-  /* Active/current link */
-  .sidebar a.active {
-    background-color: #04AA6D;
-    color: white;
+  .header-right {
+    float: none;
   }
+}
+
+
+
+/*-----------------------Cover Photo------------------------*/
+
+.image-background{
+  height: 300px;
+  background-size: cover;
+  margin-bottom: 3cm;
   
-  /* Links on mouse-over */
-  .sidebar a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-  }
-  
-  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-  div.content  {
-    margin-left: 200px;
-    padding: 1px 16px;
-    
-  }
-  
+}
+
+
+/*
+  /*--------------------------sidebar-------------------*/
+
+/* The side navigation menu */
+.sidebar {
+  margin-top: 4cm;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  position: absolute;
+  overflow: auto;
+}
+
+/* Sidebar links 
+.sidebar a {
+  font-size: large;
+  display: block;
+  padding-left: 2cm;
+  padding-top: 4cm;
+  padding-bottom: 300px;
+  text-decoration: none;
+}
+
+*/
+
+.aboutme{
+  font-size: 30px;
+  display: block;
+  padding-left: 2cm;
+  padding-top: 1cm;
+  padding-bottom:4cm;
+  text-decoration: none;
+  border-right: #04AA6D solid 7px;
+  margin-bottom: 1cm;
+
+}
+
+.work{
+  font-size: 30px;
+  display: block;
+  padding-left: 2cm;
+  padding-top: 2cm;
+  padding-bottom: 38cm;
+  text-decoration: none;
+  border-right: #04AA6D solid 7px;
+  margin-bottom: 1cm;
+  margin-top: 5cm;
  
 
-  /* imagenes del diseno*/
+}
 
-  
+.contactme{
+  font-size: 30px;
+  text-align-last: center;
+  display: block;
+  padding-left: 2cm;
+  padding-top: 4cm;
+  padding-bottom:4cm;
+  text-decoration: none;
+  border-right: #04AA6D solid 7px;
+  margin-bottom: 1cm;
 
 
-  .about-section {
-    padding: 80px;
-    text-align: center;
-    color: white;
-  
-  }
-  
-.container {
-  padding: 80px;
+}
+
+
+
+
+.sidebar-work{
+  font-size: large;
+  display: block;
+  padding-left: 2cm;
+  padding-top: 4cm;
+  padding-bottom: 300px;
+  text-decoration: none;
+}
+
+
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-top: 2cm;
   margin-left: 200px;
+  padding: 1px 16px;
+  height: 100%;
+}
+
+.content-text{
+  margin-top: 1.5cm;
+  margin-bottom: 6cm;
+
+}
+
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+
+/*----------------Work section Big image (center)------------>*/
+.containerwork{
+  padding:20px;
+  position:relative;
+}
+.image1{
+  border-color: rgb(55, 151, 224);
+  border-width: 6px;
+  border-style: solid;
+  background-color: aquamarine;
+}
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 70px;
+  left: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-color: rgb(55, 151, 224);
+  border-style: solid;
+  border-width: 6px;
+  width: 20%;
+  height: 15%;
+}
+
+.text-block h2 {
+  font-size: 2vw;
+}
+
+.text-block p {
+  font-size: 1vw;
+}
+
+.image1:hover {
+  border-color: aquamarine;
+  border-style: solid;
+  border-width: 6px;
+  color: blue;
   
 }
 
-.container-img{
-  border: 7px solid  #04AA6D;
+.text-block:hover{
+  position:absolute;
+  border-color: aquamarine;
+  border-style: solid;
+  border-width: 6px;
+  color: blue;
 }
+
+
+
+/*--------WORK SMALL IMAGES GROUP 1(left)---------*/
+
+.containerwork1{
+  padding:20px;
+  position:relative;
+  display: flex;
+}
+.image2{
+  border-color: rgb(55, 151, 224);
+  border-width: 6px;
+  border-style: solid;
+  background-color: aquamarine;
+}
+
+/* --------Bottom right text----------- */
+
+.text-block1 {
+  position: absolute;
+  bottom: 70px;
+  left: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-color: rgb(55, 151, 224);
+  border-style: solid;
+  border-width: 6px;
+  width: 30%;
+  height: 25%;
+}
+
+
+.text-block1 h2 {
+  font-size: 1vw;
+}
+
+.text-block1 p {
+  font-size: 1vw;
+}
+
+
+.image2:hover {
+  align-items: absolute;
+  border-color: aquamarine;
+  border-style: solid;
+  border-width: 6px;
+  color: blue;
   
+}
  
- 
+.text-block1:hover{
+
+  border-color: aquamarine;
+  border-style: solid;
+  border-width: 6px;
+  color: blue;
+}
+
+/*----------WORK SMALL IMAGE 2 (right)---------------*/
+
+.text-block2 {
+  position: absolute;
+  bottom: 70px;
+  right: 65px;
+  background-color: black;
+  color: white;
+  padding-left: 50px;
+  padding-right: 52px;
+  border-color: rgb(55, 151, 224);
+  border-style: solid;
+  border-width: 6px;
+  width: 25%;
+  height: 25%;
+}
+
+
+.text-block2 h2 {
+  font-size: 1vw;
+}
+
+.text-block2 p {
+  font-size: 1vw;
+}
+
+.image2:hover {
+  align-items: absolute;
+  border-color: aquamarine;
+  border-style: solid;
+  border-width: 6px;
+  color: blue;
+  
+}
+
+
+.text-block2:hover {
+
+  border-color: aquamarine;
+  border-style: solid;
+  border-width: 6px;
+  color: blue;
+}
+
+
+/* --------------Contact Form----------------- */
 
 
 
 
 
+
+  
