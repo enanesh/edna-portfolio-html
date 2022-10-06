@@ -75,10 +75,7 @@
 /*-----------------------Cover Photo------------------------*/
 
 .image-background{
-  height: 300px;
   background-size: cover;
-  margin-bottom: 3cm;
-  
 }
 
 
@@ -95,17 +92,7 @@
   overflow: auto;
 }
 
-/* Sidebar links 
-.sidebar a {
-  font-size: large;
-  display: block;
-  padding-left: 2cm;
-  padding-top: 4cm;
-  padding-bottom: 300px;
-  text-decoration: none;
-}
 
-*/
 
 .aboutme{
   font-size: 30px;
@@ -182,7 +169,6 @@ div.content {
 }
 
 .content-text{
-  margin-top: 1.5cm;
   margin-bottom: 6cm;
 
 }
@@ -191,17 +177,22 @@ div.content {
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 700px) {
   .sidebar {
-    width: 100%;
-    height: auto;
+    display:flex;
+    width: 50px;
+    height: 50%;
     position: relative;
+
   }
+
   .sidebar a {float: left;}
   div.content {margin-left: 0;}
+
 }
 
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
 @media screen and (max-width: 400px) {
   .sidebar a {
+    width: 10%;
     text-align: center;
     float: none;
   }
@@ -366,6 +357,14 @@ div.content {
 
 
 /* --------------Contact Form----------------- */
+
+.contact-form {
+ margin-top: 5cm;
+ font-size: large;
+ text-align: left;
+
+
+}
 
 
 
