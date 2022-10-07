@@ -223,8 +223,7 @@ div.content {
   border-color: rgb(55, 151, 224);
   border-style: solid;
   border-width: 6px;
-  width: 20%;
-  height: 15%;
+  
 }
 
 .text-block h2 {
@@ -250,7 +249,16 @@ div.content {
   border-width: 6px;
   color: blue;
 }
+@media screen and (max-width: 700px) {
+  .containerwork {
+    display:flex;
+    flex-direction: column;
+    width: 50px;
+    height: 50%;
+    position: relative;
 
+  }
+}
 
 
 /*--------WORK SMALL IMAGES GROUP 1(left)---------*/
@@ -280,8 +288,7 @@ div.content {
   border-color: rgb(55, 151, 224);
   border-style: solid;
   border-width: 6px;
-  width: 30%;
-  height: 25%;
+  
 }
 
 
@@ -311,6 +318,17 @@ div.content {
   color: blue;
 }
 
+@media screen and (max-width: 700px) {
+  .containerwork1 {
+    display:flex;
+    flex-direction: column;
+    width: 50px;
+    height: 50%;
+    position: relative;
+
+  }
+}
+
 /*----------WORK SMALL IMAGE 2 (right)---------------*/
 
 .text-block2 {
@@ -324,8 +342,7 @@ div.content {
   border-color: rgb(55, 151, 224);
   border-style: solid;
   border-width: 6px;
-  width: 25%;
-  height: 25%;
+  
 }
 
 
@@ -364,6 +381,11 @@ div.content {
  text-align: left;
 
 
+}
+
+.contact-form h2{
+  padding-bottom: 2cm;
+}
 }
 
 
